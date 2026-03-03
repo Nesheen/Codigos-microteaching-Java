@@ -10,7 +10,7 @@ public class Main {
         //pedir las 3 notas
         for (int i=0;i <3; i++) {
             System.out.println("Ingrese la nota " + (i + 1) + ":");
-            double nota = scanner.nextDouble();
+            double nota = Double.parseDouble(scanner.nextLine());
             notas.add(nota);
         }
         //mostrar resultados

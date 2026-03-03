@@ -8,7 +8,7 @@ public class Main {
         System.out.println("Ingrese su edad: ");
 
         if(scanner.hasNextInt()){
-           edad = scanner.nextInt();
+           edad = Integer.parseInt(scanner.nextLine());
         }else{
             System.out.println("Ingrese la edad en forma de entero");
             return;
