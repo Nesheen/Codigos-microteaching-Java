@@ -2,21 +2,24 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int edad=0;
+        Scanner sc = new Scanner(System.in);
 
-        System.out.println("Ingrese su edad: ");
+        // Lectura de Nombre (String) - no requiere parseo
+        System.out.print("Ingrese su nombre: ");
+        String nombre = sc.nextLine();
 
-        if(scanner.hasNextInt()){
-           edad = Integer.parseInt(scanner.nextLine());
-        }else{
-            System.out.println("Ingrese la edad en forma de entero");
-            return;
-        }
-        if (edad >=18){
-            System.out.println("Usted es mayor de edad");
-        }else{
-            System.out.println("Usted es menor de edad");
-        }
+        // Lectura de Edad (int) - parseo con Integer.parseInt()
+        System.out.print("Ingrese su edad: ");
+        int edad = Integer.parseInt(sc.nextLine());
+
+        // Lectura de Sueldo (double) - parseo con Double.parseDouble()
+        System.out.print("Ingrese su sueldo: ");
+        double sueldo = Double.parseDouble(sc.nextLine());
+
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Edad: " + edad + " años");
+        System.out.println("Sueldo: $" + sueldo);
+
+        sc.close();
     }
 }
